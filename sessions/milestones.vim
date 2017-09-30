@@ -1,42 +1,37 @@
-" ~\vimfiles\sessions\EMSE_minor.vim:
+" ~\vimfiles\sessions\milestones.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 27 September 2017 at 14:40:59.
+" Created by session.vim 2.13.1 on 29 September 2017 at 16:55:15.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=egmrLT
-silent! set guifont=Consolas:h10:cANSI:qDRAFT
+silent! set guifont=Consolas:h10
 if exists('g:syntax_on') != 1 | syntax on | endif
 if exists('g:did_load_filetypes') != 1 | filetype on | endif
 if exists('g:did_load_ftplugin') != 1 | filetype plugin on | endif
 if exists('g:did_indent_on') != 1 | filetype indent on | endif
-if &background != 'light'
-	set background=light
+if &background != 'dark'
+	set background=dark
 endif
-if !exists('g:colors_name') || g:colors_name != 'solarized' | colorscheme solarized | endif
+if !exists('g:colors_name') || g:colors_name != 'spacegray' | colorscheme spacegray | endif
 call setqflist([])
 let SessionLoad = 1
 if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd C:\postdoc\EMSE_MSR_minor
+cd C:\postdoc\Daniel\Milestones\paper
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +223 main.tex
-badd +64 \Program\ Files\ (x86)\Vim\_vimrc
-badd +115 background.tex
-badd +157 introduction.tex
-badd +899 studysettings.tex
-badd +10 rq1.tex
-badd +1 threats.tex
-badd +236 submission\minor\letter\letter.tex
-badd +1 conclusion.tex
-badd +1 rq3.tex
-badd +1 rq2.tex
+badd +87 main.tex
+badd +453 studysettings.tex
+badd +12 background.tex
+badd +1 introduction.tex
+badd +1335 references.bib
 argglobal
 silent! argdel *
+argadd main.tex
 edit studysettings.tex
 set splitbelow splitright
 set nosplitbelow
@@ -53,12 +48,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 963 - ((18 * winheight(0) + 18) / 37)
+let s:l = 485 - ((40 * winheight(0) + 29) / 59)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-963
-normal! 06|
+485
+normal! 043|
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
